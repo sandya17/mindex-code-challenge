@@ -76,11 +76,23 @@ The numberOfReports for employee John Lennon (employeeId: 16a596ae-edd3-4847-99f
 This new type should have a new REST endpoint created for it. This new endpoint should accept an employeeId and return 
 the fully filled out ReportingStructure for the specified employeeId. The values should be computed on the fly and will 
 not be persisted.
+> __Note__
+Implemenation:
+   1. Added new Entity, Repository for ReportingStructure
+   2. Created new Service method - readReportingStructure
+   3. Added new REST endpoint GET /employee/{id}/reporting_structure
 
 ### Task 2
 Create a new type, Compensation. A Compensation has the following fields: employee, salary, and effectiveDate. Create 
 two new Compensation REST endpoints. One to create and one to read by employeeId. These should persist and query the 
 Compensation from the persistence layer.
+> __Note__
+Implemenation:
+   1. Added new Entity, Repository for Compensation
+   2. Created new Service methods - createCompensation, readCompensation
+   3. Added new REST endpoints GET /employee/{id}/compensation, POST /employee/compensation
+> __Note__
+Also added neccesary UNIT test cases for new endpoints.
 
 ## Delivery
 Please upload your results to a publicly accessible Git repo. Free ones are provided by Github and Bitbucket.
